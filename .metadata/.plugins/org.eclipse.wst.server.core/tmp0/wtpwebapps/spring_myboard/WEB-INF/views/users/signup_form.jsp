@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/users/signup_form.jsp</title>
+<style>
+	.container{ 
+		text-align: center;
+	}
+		
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>WELCOME BLOG</h1>
+		<h2>회원 가입</h2>
+		<form action="${pageContext.request.contextPath}/users/signup" method="post" id="myForm">
+			<div>
+				<label class="control-label" for="id"></label>
+				<input class="form-control" type="text" name="id" id="id" placeholder="아이디"/>		
+			</div>
+			<div>
+				<label class="control-label" for="pwd"></label>
+				<input class="form-control" type="password" name="pwd" id="pwd" placeholder="비밀번호"/>	
+			</div>
+			<div>
+				<label class="control-label" for="pwd2"></label>
+				<input class="form-control" type="password" name="pwd2" id="pwd2" placeholder="비밀번호 확인"/>
+			</div>
+			<div>
+				<label class="control-label" for="email"></label>
+				<input class="form-control" type="text" name="email" id="email" placeholder="이메일"/>
+			</div>
+			<button class="btn btn-primary" type="submit">가입</button>
+		</form>
+	</div>	
+</body>
+</html>

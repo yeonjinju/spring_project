@@ -1,0 +1,32 @@
+1688880494566	Delete element
+1688884604128	Rename resource 'blog'
+1688884721358	Rename type 'CafeCommentDao'
+1688884771103	Rename type 'CafeCommentDaoImpl'
+1688884849165	Rename type 'CafeDao'
+1688885057230	Rename type 'CafeCommentDto'
+1688885063358	Rename type 'CafeDto'
+1688885093161	Rename compilation unit 'CafeDaoImpl.java'
+1688885177813	Rename type 'CafeService'
+1688885184259	Rename type 'CafeServiceImpl'
+1688886184324	Delete element
+1688886205335	Copy package
+1688886210688	Delete element
+1688886213475	Delete element
+1688887455646	Rename resource 'CafeCommentMapper.xml'
+1688887549296	Rename resource 'CafeMapper.xml'
+1688887551852	Delete element
+1688887553695	Delete element
+1688893242299	Move 'image' to 'static'
+1688894027666	Copy folder
+1688894467468	Copy folder
+1688894899554	Rename resource 'image'
+1688895771886	Rename resource 'image'
+1688895779576	Rename resource 'image'
+1688896109552	Delete element
+1688896113498	Delete element
+1688896178217	Delete element
+1688896180095	Delete element
+1688896197724	Copy files
+1688898103475	Copy folder
+1688906127167	Copy file
+1688906231125	Delete element

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\acorn230405\sts_project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3307377374.index
+4039083855.index
+1323337857.index
+2168232160.index
+1184059583.index
+815509013.index

@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<SAVED_DATA>
+	<bookmarks>
+		<jdbcDriver className="oracle.jdbc.driver.OracleDriver" name="Oracle JDBC driver" type="ORACLE" version="11.2.0.4.0">
+			<jar fileName="C:\acorn230405\ojdbc6.jar" />
+		</jdbcDriver>
+		<jdbcDriver className="org.apache.derby.jdbc.EmbeddedDriver" name="org.apache.derby.jdbc.EmbeddedDriver" type="DERBY" version="">
+			<jar fileName="C:/acorn230405/sts-bundle/sts-3.9.18.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar" />
+		</jdbcDriver>
+		<bookmark>
+			<name>(Internal) Derby</name>
+			<username>QUANTUM</username>
+			<password />
+			<prompt>false</prompt>
+			<connect>jdbc:derby:C:/acorn230405/sts-bundle/sts-3.9.18.RELEASE/plugins/com.quantum.derby_3.3.10/data/quantum</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>true</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
+			<type>DERBY</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:/acorn230405/sts-bundle/sts-3.9.18.RELEASE/plugins/com.quantum.derby_3.3.10/lib/derby.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList />
+		</bookmark>
+		<bookmark>
+			<name>My Local Oracle</name>
+			<username>scott</username>
+			<password>tiger</password>
+			<prompt>false</prompt>
+			<connect>jdbc:oracle:thin:@localhost:1521:xe</connect>
+			<autoCommit>true</autoCommit>
+			<autoCommitPreference>Always True</autoCommitPreference>
+			<autoCommitIgnoreView>false</autoCommitIgnoreView>
+			<quoteAll>false</quoteAll>
+			<sendQueryAsIs>false</sendQueryAsIs>
+			<stripNewline>false</stripNewline>
+			<shutdownOnDisconnect>false</shutdownOnDisconnect>
+			<defaultEncoding />
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<type>ORACLE</type>
+			<substituteVariables>false</substituteVariables>
+			<variablesRegexp>\$\{(.*?)\}</variablesRegexp>
+			<driverLocation>C:\acorn230405\ojdbc6.jar</driverLocation>
+			<Other_Schemas schemaRule="useAll" />
+			<quickList />
+			<queryList>
+				<query>
+					<queryString>CREATE TABLE tbl_member (
+    userId      VARCHAR2(50)    not null,
+    userPass    VARCHAR2(100)   not null,
+    userName    VARCHAR2(30)    not null,
+    userPhon    VARCHAR2(20)    not null,
+    userAddr1   VARCHAR2(20)    null,
+    userAddr2   VARCHAR2(50)    null,
+    userAddr3   VARCHAR2(50)    null,
+    regiDate    DATE            default sysdate,
+    verify      NUMBER          default 0,
+    primary key(userId)
+)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE tbl_goods (
+    gdsNum       NUMBER          not null,
+    gdsName      VARCHAR2(50)    not null,
+    cateCode     VARCHAR2(30)    not null,
+    gdsPrice     NUMBER          not null,
+    gdsStock     NUMBER          null,
+    gdsDes       VARCHAR2(500)    null,
+    gdsImg       VARCHAR2(200)    null,
+    gdsDate      DATE            default sysdate,
+    primary key(gdsNum)  
+)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE SEQUENCE tbl_goods_seq</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE goods_category (
+    cateName     VARCHAR2(20)    not null,
+    cateCode     VARCHAR2(30)    not null,
+    cateCodeRef  VARCHAR2(30)    null,
+    PRIMARY KEY(cateCode),
+    foreign key(cateCodeRef) references goods_category(cateCode)
+)</queryString>
+				</query>
+				<query>
+					<queryString>alter table tbl_goods add
+    constraint fk_goods_category
+    foreign key (cateCode)
+        references goods_category(cateCode)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE board (
+	id int PRIMARY KEY,
+	subject VARCHAR2(100),
+	context VARCHAR2(1000),
+	attachments VARCHAR2(100),
+	likes int,
+	views int,
+	create_time DATE DEFAULT SYSDATE,
+	update_time DATE DEFAULT SYSDATE
+)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE board(
+    num NUMBER PRIMARY KEY, 
+    writer VARCHAR2(100) NOT NULL, 
+    title VARCHAR2(100) NOT NULL, 
+    content CLOB, 
+    viewCount NUMBER, 
+    regdate DATE 
+)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE SEQUENCE board_seq</queryString>
+				</query>
+				<query>
+					<queryString>CREATE TABLE board_comment(
+    num NUMBER PRIMARY KEY, 
+    writer VARCHAR2(100), 
+    content VARCHAR2(500), 
+    target_id VARCHAR2(100), 
+    ref_group NUMBER, 
+    comment_group NUMBER, 
+    deleted CHAR(3) DEFAULT 'no', 
+    regdate DATE
+)</queryString>
+				</query>
+				<query>
+					<queryString>CREATE SEQUENCE board_comment_seq</queryString>
+				</query>
+			</queryList>
+		</bookmark>
+	</bookmarks>
+</SAVED_DATA>

@@ -1,0 +1,5 @@
+
+7월 11, 2023 23:29:11.439 NEW SESSION
+7월 11, 2023 23:29:11.439 [4828:10936:0711/232911.437:ERROR:usb_descriptors.cc(141)] Failed to read length for configuration 1.
+7월 11, 2023 23:29:11.440 [4828:10936:0711/232911.437:ERROR:usb_descriptors.cc(100)] Failed to read all configuration descriptors. Expected 2, got 1.
+7월 11, 2023 23:29:11.441 [4828:10936:0711/232911.437:ERROR:device_event_log_impl.cc(222)] [23:29:11.437] USB: usb_device_win.cc:95 Failed to read descriptors from \\?\usb#vid_10a5&pid_0007#5&c70d693&0&8#{a5dcbf10-6530-11d2-901f-00c04fb951ed}.
